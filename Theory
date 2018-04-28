@@ -1,0 +1,80 @@
+1) 
+Kernels:
+
+Container: Isolated area of an OS with resource usage limits applied
+
+Namespaces and Control Groups are Linux Kernel Primitives but now we have equivalence on Windows too
+
+Namespaces: Namespaces are about isolation
+Carve OS into multiple isolated virtual operated systems
+
+In Hypervisor we carve out multiple VMs from a physical machine (RAM, CPU, etc.)
+where each one gets a own slice of RAM, CPU, virtual nw, virtual storage etc.
+In Virtual server or HyperV each VM or virtual server looks like a physical server/machine
+
+In Containers, we take namespaces to take a single Operating System with all its resources that are high level constructs like root file systems, process trees and users
+are carved into multiple Virtual Operating Systems called Containers. Each container gets it own virtual/containerized root file system, process trees, root users etc.
+In Containers each container looks like a regular Operating System but in reality it isn't as all the containers share a single kernel on the host.
+But all these containers are isolated and are unaware of each others.
+
+Linux Namespaces are :
+Process Id (pid)
+Network (net)
+Filesystem/mpunt (mnt)
+UTS (uts)
+User (user)
+A docker container is an organized collection of these Namespaces.
+So every container has its own pid, net, mnt, uts, user etc. within a secured boundary.
+
+Control Groups(cgroups in linux and Job Objects in Windows) : grouping objects and setting limits
+Group process and impose limitations on resource utilization
+eg: 1 Container will have x amount of RAM, x amount of CPU etc.
+
+Union File System: 
+Layers - Union fs/mount $ COW (Also check LCOW)
+
+
+2) 
+
+Docker Engine (Linux) consists of these four major components:
+ 
+a) Client - where we run commands like ```docker container run imageName```
+b) Docker API = Daemon - implments REST API - implements orchestration, build, stacks, overlay nw etc.
+c) containerD = container supervise that handles containers execution - lifecycle operations- eg: start, stop, pause, unpause
+	implements things like basic nw, basic storage, basic image distribution etc.
+d) OCI layer - it does the interfacing with the kernel.
+
+So Client (a) asks the Daemon (b) for the container.
+Daemon(b) gets containerD(c) to start, and manage container.
+runC(d) at the OCI layer actually builds the container.
+"runc" is the reference implementation of the OCI runtime spec
+
+In Windows:
+a)  Client
+b) Daemon
+c) Compute services layer (instead of containerD and OCI in linux)
+Also implemented NTFS and Reg for layering system.
+Client(docker.exe) and daemon(dockerd.exe)
+We can run containers on windows via 2 methods:
+1) Native windows container : ```docker container run ...```
+	uses Namespaces and control groups to run isolated containers using host OS (kernel)
+2) Hyper-V containers: ```docker container run --isolation=hyperv ...```
+	In this case it spins up lightweight VM (even can have diff VMs with diff OSs) for each container 
+When we run a command in Client:
+Client calls a REST API in the Daemon (POST /vX.X/containers/create HTTP/1.1) 
+Daemon calls containerD over GRPC API on a local unix socket eg: client.NewContainer(context, ...)
+containerD starts a "shim" process for every container and "runc" creates a container and exists.
+"runc" is called for every container and exits but shim still runs. 
+This happends with every container and this is how containerD effectively manages multiple "runc" or shims.
+
+Because a), b), c) and d) are all loosely coupled:
+We can even restart daemon or containerD and it wont affect running containers. WOW!
+We can upgrade docker to newer versions even in production without affecting running containers.
+When it comes back up rediscovers running containers and shime and re-connects.
+
+
+Images are read only templates for creating application container. It containes all code and supporting files(OS files and objects, app files, config, dependencies, manifest-json file) to run an application.
+Images are bunch of layers stacked on top of each other.
+Images are build time constructs.
+Containers are runtime, container is a running image.
+ Isolated area of an OS with resource usage limits applied
