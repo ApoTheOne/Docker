@@ -1,3 +1,4 @@
+```
 //Install Docker on Linux
 wget -qO- https://get.docker.com/ | sh
 
@@ -178,3 +179,4 @@ docker-machine ssh apovm1 "docker swarm leave --force"
 
 // unset the docker-machine environment variables in your current shell with 
 & "C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe" env apovm1 -u | Invoke-Expression
+```
