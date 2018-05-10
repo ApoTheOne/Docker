@@ -21,8 +21,8 @@
 #### Docker theory 
 docker : /ˈdɒkə/ : noun - 
 a person employed in a port to load and unload ships.
- - Virtual Machines |
- - Docker containers |
+ - Before - Virtual Machines |
+ - Now - Docker containers |
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
