@@ -3,7 +3,7 @@
  - Dockerfile |
   - How to create a docker file? |
  - How to build a docker image? |
- - How to upload an image to Docker Hub?
+ - How to upload an image to Docker Hub? |
 ---
  - Docker Compose |
  - Environment variables |
@@ -15,12 +15,12 @@
  - Docker Swarm |
   - Services |
   - Stacks |
-  - Tasks
+  - Tasks |
 ---
 ### Docker - theory
 ---
 Virtual Machines |
-Docker
+Docker |
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
