@@ -23,14 +23,25 @@
 Container: Isolated area of an OS with resource usage limits applied
 
 With Docker, you can just grab a portable node or dotnetcore runtime as an image, no installation necessary. Then, your build can include the base node or any other runtime image right alongside your app code, ensuring that your app, its dependencies, and the runtime, all travel together.
-
+---
 To use a programming metaphor, if an image is a class, then a container is an instance of a class—a runtime object. Containers are hopefully why you're using Docker; they're lightweight and portable encapsulations of an environment in which to run applications.
 [Source](https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container)
 
 These portable images are defined by something called a Dockerfile.
 ---
-
+#### Networking
+Create a network and run containers in those network using "--network"
+```
+docker network create testnw
+docker create --name my-nginx --network testnw -p 8080:80 nginx:latest
+docker network connect testnw my-nginx
+```
 ---
+### Swarm
+
+A swarm is a group of machines that are running Docker and joined into a cluster. After that has happened, you continue to run the Docker commands you’re used to, but now they are executed on a cluster by a swarm manager. The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
+---
+
 
 #### Services
 In a distributed application, different pieces of the app are called “services.” For example, if you imagine a video sharing site, it probably includes a service for storing application data in a database, a service for video transcoding in the background after a user uploads something, a service for the front-end, and so on.
@@ -48,7 +59,7 @@ To sum up: Services codify a container’s behavior in a Compose file, and this 
 
 ---
 
-### Stack
+#### Stack
 
 Run your new load-balanced app
 Before we can use the docker stack deploy command we first run:
@@ -72,23 +83,4 @@ docker service ls
 
 [Source:Docker](https://docs.docker.com/get-started/part3/#run-your-new-load-balanced-app)
 
----
-
-## Swarm
-
-A swarm is a group of machines that are running Docker and joined into a cluster. After that has happened, you continue to run the Docker commands you’re used to, but now they are executed on a cluster by a swarm manager. The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
-
----
-
-## Networking
-
-Create a network and run containers in those network using "--network"
-
-```
-docker network create testnw
-docker create --name my-nginx --network testnw -p 8080:80 nginx:latest
-docker network connect testnw my-nginx
-```
-
----
 # THANK YOU
