@@ -19,6 +19,8 @@
 ---
 ### Docker - theory
 ---
+##### Difference between Virtual Machines and Docker
+---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
 
