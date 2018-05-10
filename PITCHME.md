@@ -26,7 +26,8 @@ Docker is a platform for developers and sysadmins to develop, deploy, and run ap
  - Docker containers |
 
 ---
-Containerization makes CI/CD seamless. For example:  
+Containerization makes CI/CD seamless.  
+For example:  
 - applications have no system dependencies
 - updates can be pushed to any part of a distributed application
 - resource density can be optimized.
