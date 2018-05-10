@@ -18,6 +18,8 @@
   - Tasks |
 ---
 #### Docker theory 
+docker : /ˈdɒkə/ : noun - 
+a person employed in a port to load and unload ships.
  - Virtual Machines |
  - Docker containers |
 ---
@@ -32,13 +34,25 @@ To use a programming metaphor, if an image is a class, then a container is an in
 These portable images are defined by something called a Dockerfile.
 ---
 #### Networking
-Create a network and run containers in those network using "--network"
+---
+##### - Bridge network 
+- Single host network
+- Each Bridge network is isolated from each others.
+- No communication between 2 containers in different bridge networks.
 ```
 docker network create testnw
+```
+Create a network and run containers in those network using "--network"
+```
 docker create --name my-nginx --network testnw -p 8080:80 nginx:latest
 docker network connect testnw my-nginx
 ```
 ---
+##### - Overlay network 
+- Multi-host network
+- Containers only network
+- No communication with other physical servers/machines or virtual machines/EC2.
+
 ### Swarm
 
 A swarm is a group of machines that are running Docker and joined into a cluster. After that has happened, you continue to run the Docker commands you’re used to, but now they are executed on a cluster by a swarm manager. The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
