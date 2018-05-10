@@ -18,7 +18,7 @@
   - Tasks |
 ---
 #### Docker - theory 
-
+---
 Virtual Machines |
 Docker |
 
