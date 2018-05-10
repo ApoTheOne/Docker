@@ -112,5 +112,5 @@ docker service ls
 ```
 
 [Source:Docker](https://docs.docker.com/get-started/part3/#run-your-new-load-balanced-app)
-
-# THANK YOU
+---
+# Thank you!
