@@ -60,9 +60,13 @@ docker network connect testnw my-nginx
 ##### - Overlay network 
 - Multi-host network
 - Containers only network
-- No communication with other physical servers/machines or virtual machines/EC2.
-
-
+- Container to Container but not container to physical servers/virtual machines/EC2.
+---
+##### MACVLAN  
+- In windows it is named as "Transparent" driver.
+- It assigns every container its own IP address and MAC address on existing network.
+- Requires promiscuous mode.
+##### IPVLAN: Similar to MACVLAN but doesn't requires promiscuous mode
 ---
 ### Swarm
 A swarm is a group of machines that are running Docker and joined into a cluster.  
