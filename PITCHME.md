@@ -1,7 +1,7 @@
 # Docker
 ---
- - Theory
- - Dockerfile 
+ - Theory 
+ - Dockerfile |
   - How to create a docker file? |
  - How to build a docker image? |
  - How to upload an image to Docker Hub? |
