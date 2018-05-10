@@ -31,8 +31,8 @@ For example:
 - resource density can be optimized.
 With Docker, scaling your application is a matter of spinning up new executables, not running heavy VM hosts.
 ---
-##### - Container and Images
-Containers and Images: A container is launched by running an image.  
+##### Container and Images
+A container is launched by running an image.  
 An image is an executable package that includes everything needed to run an application the code, a runtime, libraries, environment variables, and configuration files.  
 Container is an isolated area of an OS with resource usage limits applied.  
 A container is a runtime instance of an image what the image becomes in memory when executed.
