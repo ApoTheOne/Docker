@@ -18,8 +18,8 @@
   - Tasks |
 ---
 #### Docker theory 
-Virtual Machines |
-Docker containers |
+ - Virtual Machines |
+ - Docker containers |
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
