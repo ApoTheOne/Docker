@@ -1,5 +1,6 @@
 # Docker
 ---
+ - Theory
  - Dockerfile 
   - How to create a docker file? |
  - How to build a docker image? |
@@ -32,6 +33,8 @@ To use a programming metaphor, if an image is a class, then a container is an in
 [Source](https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container)
 
 These portable images are defined by something called a Dockerfile.
+---
+### DEMO TIME
 ---
 #### Networking
 ---
