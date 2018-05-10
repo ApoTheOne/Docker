@@ -12,10 +12,10 @@
  - Volumes
 ---
  - Network
- - Services
- - Stacks
- - Tasks
- - Swarm
+ - Docker Swarm
+  - Services
+  - Stacks
+  - Tasks
 ---
 ### Docker - theory
 ---
