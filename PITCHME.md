@@ -1,25 +1,26 @@
 # Docker
 ---
- - Dockerfile
-  - How to create a docker file?
- - How to build a docker image?
+ - Dockerfile |
+  - How to create a docker file? |
+ - How to build a docker image? |
  - How to upload an image to Docker Hub?
 ---
- - Docker Compose
- - Environment variables
- - Port Mapping
- - Links
- - Volumes
+ - Docker Compose |
+ - Environment variables |
+ - Port Mapping |
+ - Links |
+ - Volumes |
 ---
- - Network
- - Docker Swarm
-  - Services
-  - Stacks
+ - Network |
+ - Docker Swarm |
+  - Services |
+  - Stacks |
   - Tasks
 ---
 ### Docker - theory
 ---
-##### Difference between Virtual Machines and Docker
+Virtual Machines |
+Docker
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
