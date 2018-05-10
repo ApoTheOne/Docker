@@ -20,15 +20,17 @@
   - Tasks |
 ---
 #### Overview 
-Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization.  
+Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization.
+
+ - Virtual Machines |
+ - Docker containers |
+
+---
 Containerization makes CI/CD seamless. For example:  
 - applications have no system dependencies
 - updates can be pushed to any part of a distributed application
 - resource density can be optimized.
 With Docker, scaling your application is a matter of spinning up new executables, not running heavy VM hosts.
-
- - Virtual Machines |
- - Docker containers |
 ---
 ##### - Docker, Container and Images
 Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers.  
