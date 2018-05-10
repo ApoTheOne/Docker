@@ -18,8 +18,10 @@
   - Tasks |
 ---
 #### Docker - theory 
+
 Virtual Machines |
 Docker |
+
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
