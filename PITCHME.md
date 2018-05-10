@@ -22,6 +22,7 @@
 #### Docker theory 
 docker : /ˈdɒkə/ : noun - 
 a person employed in a port to load and unload ships.
+Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers. The use of Linux containers to deploy applications is called containerization.
  - Before - Virtual Machines |
  - Now - Docker containers |
 ---
