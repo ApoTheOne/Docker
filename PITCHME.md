@@ -67,7 +67,7 @@ docker network connect testnw my-nginx
 - It assigns every container its own IP address and MAC address on existing network.
 - Requires promiscuous mode.  
 
-##### IPVLAN: Similar to MACVLAN but doesn't requires promiscuous mode
+##### - IPVLAN: Similar to MACVLAN but doesn't requires promiscuous mode
 ---
 ### Swarm
 A swarm is a group of machines that are running Docker and joined into a cluster.  
