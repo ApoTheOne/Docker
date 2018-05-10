@@ -1,6 +1,7 @@
 # Docker
-Topics |
- - Theory 
+---
+#### Topics :
+ - Theory |
  - Dockerfile |
   - How to create a docker file? |
  - How to build a docker image? |
