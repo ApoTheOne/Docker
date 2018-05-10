@@ -17,11 +17,11 @@
   - Stacks |
   - Tasks |
 ---
+
 #### Docker - theory 
 ---
-Virtual Machines |
-Docker |
-
+Virtual machines |
+Docker Containers
 ---
 ##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
