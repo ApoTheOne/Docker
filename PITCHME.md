@@ -65,7 +65,8 @@ docker network connect testnw my-nginx
 ##### MACVLAN  
 - In windows it is named as "Transparent" driver.
 - It assigns every container its own IP address and MAC address on existing network.
-- Requires promiscuous mode.
+- Requires promiscuous mode.  
+
 ##### IPVLAN: Similar to MACVLAN but doesn't requires promiscuous mode
 ---
 ### Swarm
