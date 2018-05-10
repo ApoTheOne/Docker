@@ -1,27 +1,34 @@
 # Docker
-
 ---
-Topics: 
-- Images |
-- Containers |
-- Services |
-- Stack |
-- Swarms |
-
+ - Dockerfile
+ - How to create a docker file.
+ - How to build a docker image.
+ - How to upload an image to Docker Hub.
 ---
-
-### Images and Containers
+ - Docker Compose
+ - Environment variables
+ - Port Mapping
+ - Links
+ - Volumes
+---
+ - Network
+ - Swarm
+  - Services
+  - Stacks
+  - Tasks
+---
+### Docker - theory
+ - Docker Container and Images
+---
 Container: Isolated area of an OS with resource usage limits applied
 
 With Docker, you can just grab a portable node or dotnetcore runtime as an image, no installation necessary. Then, your build can include the base node or any other runtime image right alongside your app code, ensuring that your app, its dependencies, and the runtime, all travel together.
-These portable images are defined by something called a Dockerfile.
-contd...
 
----
-
-contd...
 To use a programming metaphor, if an image is a class, then a container is an instance of a class—a runtime object. Containers are hopefully why you're using Docker; they're lightweight and portable encapsulations of an environment in which to run applications.
 [Source](https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container)
+
+These portable images are defined by something called a Dockerfile.
+---
 
 ---
 
