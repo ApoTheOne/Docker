@@ -323,8 +323,8 @@ docker service ps voter
 docker stack services voter
 docker service inspect voter_vote --pretty
 docker service ps voter_vote
-
---------------------------------------------------------------
+```
+------------------------------------------------------------------------------------------------------------------------------
 
 ---
 Topics: 
