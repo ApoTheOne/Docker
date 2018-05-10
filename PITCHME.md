@@ -23,7 +23,7 @@
 - Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers.  
 - The use of Linux containers to deploy applications is called containerization.
 ---
-#### Virtual Machines to Docker containers  
+#### Virtual Machines to Docker containers.
 Containerization makes CI/CD seamless.  
 For example:  
 - applications have no system dependencies
@@ -62,16 +62,16 @@ docker network connect testnw my-nginx
 - Containers only network
 - No communication with other physical servers/machines or virtual machines/EC2.
 
-### Swarm
 
-A swarm is a group of machines that are running Docker and joined into a cluster. After that has happened, you continue to run the Docker commands you’re used to, but now they are executed on a cluster by a swarm manager. The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
 ---
-
-
+### Swarm
+A swarm is a group of machines that are running Docker and joined into a cluster.  
+The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.  
+Manager - worker pattern.
+---
 #### Services
 In a distributed application, different pieces of the app are called “services.” For example, if you imagine a video sharing site, it probably includes a service for storing application data in a database, a service for video transcoding in the background after a user uploads something, a service for the front-end, and so on.
 contd...
-
 ---
 contd...
 Services are really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on. Scaling a service changes the number of container instances running that piece of software, assigning more computing resources to the service in the process.
