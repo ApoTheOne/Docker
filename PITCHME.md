@@ -1,17 +1,17 @@
 # Docker
 ---
- - Dockerfile |
+ - Dockerfile 
   - How to create a docker file? |
  - How to build a docker image? |
  - How to upload an image to Docker Hub? |
 ---
- - Docker Compose |
+ - Docker Compose 
  - Environment variables |
  - Port Mapping |
  - Links |
  - Volumes |
 ---
- - Network |
+ - Network 
  - Docker Swarm |
   - Services |
   - Stacks |
