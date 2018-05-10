@@ -1,7 +1,7 @@
 # Docker
 ---
  - Dockerfile
- - How to create a docker file?
+  - How to create a docker file?
  - How to build a docker image?
  - How to upload an image to Docker Hub?
 ---
@@ -12,14 +12,14 @@
  - Volumes
 ---
  - Network
+ - Services
+ - Stacks
+ - Tasks
  - Swarm
-  - Services
-  - Stacks
-  - Tasks
 ---
 ### Docker - theory
-#### - Docker Container and Images
 ---
+##### - Docker Container and Images
 Container: Isolated area of an OS with resource usage limits applied
 
 With Docker, you can just grab a portable node or dotnetcore runtime as an image, no installation necessary. Then, your build can include the base node or any other runtime image right alongside your app code, ensuring that your app, its dependencies, and the runtime, all travel together.
@@ -32,7 +32,7 @@ These portable images are defined by something called a Dockerfile.
 
 ---
 
-### Services
+#### Services
 In a distributed application, different pieces of the app are called “services.” For example, if you imagine a video sharing site, it probably includes a service for storing application data in a database, a service for video transcoding in the background after a user uploads something, a service for the front-end, and so on.
 contd...
 
